@@ -1,4 +1,4 @@
 a.out
-*.py
+*.pyc
 *.class
 *.o
