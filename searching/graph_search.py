@@ -1,4 +1,6 @@
-from collections import deque
+# Implementing a depth-first graph search
+# Inf2D Lecture 6
+# pseudocode p76 Russel Norvig 
 
 class Problem:
 
@@ -24,12 +26,10 @@ class Frontier:
         self.states = set()
         self.nodes = list()
 
-#Returns a solution or failure
+# Depth-First Graph Search 
+# Complete on finite state spaces
+# Time and Space complexity bounded by state space
 def graph_search(problem):
-
-    # checks if initial state is the goal
-    if(problem.goal_test(problem.initial_state)):
-        return []
 
     frontier = Frontier()
     explored = set()
