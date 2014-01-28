@@ -1,24 +1,10 @@
 # Implementing a depth-first graph search
+# Info: Russel Norvig p76
 # Inf2D Lecture 6
-# pseudocode p76 Russel Norvig 
+# Luke McAuley
+# 24/1/14
 
-class Problem:
-
-    #sucessor function state -> (action, result)
-    def __init__(self, states, initial_state, successor_function, goal_test_function):
-       self.states = states
-       self.initial_state = initial_state
-       self.successor_function = successor_function
-       self.goal_test = goal_test_function
-
-class Node:
-
-    def __init__(self, state, action_sequence):
-        self.state = state
-        self.action_sequence = action_sequence
-
-    def __str__(self):
-        return self.state
+from problem import *
 
 class Frontier:
 
@@ -26,8 +12,8 @@ class Frontier:
         self.states = set()
         self.nodes = list()
 
-# Depth-First Graph Search 
-# Complete on finite state spaces
+# Complete = on finite state spaces
+# Optimal = no !
 # Time and Space complexity bounded by state space
 def graph_search(problem):
 
@@ -77,7 +63,7 @@ def main():
     def successor_funct(state):
         results = list()
         for new_state in graph[state]:
-            results.append(("go to" + str(new_state), new_state))
+            results.append(("go to " + str(new_state), new_state))
         return results
 
     result = graph_search(Problem(states, initial_state, successor_funct, goal_test))

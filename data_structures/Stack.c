@@ -1,6 +1,7 @@
 /*
-*  Implementing a stack in C
-*  24/1/14
+* Implementing a stack in C
+* Luke McAuley
+* 24/1/14
 */
 
 #include <stdlib.h>

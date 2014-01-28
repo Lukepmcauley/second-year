@@ -1,6 +1,7 @@
 /*
-* Implementing a for the ADT VeryBasicSequence
+* Implementing from the ADT VeryBasicSequence
 * from Inf-2B Data Structures & Alogrithms Lecutre 4
+* Luke McAuley
 * 27/1/14
 */
 
